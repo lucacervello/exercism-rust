@@ -1,0 +1,3 @@
+language: rust
+script:
+  - for d in ./*/ ; do (cd "$d" && cargo build --verbose --all && cargo test --verbose --all); done
