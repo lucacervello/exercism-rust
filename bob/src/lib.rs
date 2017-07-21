@@ -1,10 +1,12 @@
-pub fn reply(question: String) -> String {
-
-    let str = String::new();
+pub fn reply(question: &str) -> &str {
 
     if question.ends_with("?") {
-        str + "Sure."
+        "Sure."
+    } else if question == "" {
+        "Fine. Be that way!"
+    } else if question.to_uppercase() == question {
+        "Whoa, chill out!"
     } else {
-        str + "Whatever."
+        "Whatever."
     }
 }
